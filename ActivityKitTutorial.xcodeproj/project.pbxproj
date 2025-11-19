@@ -6,14 +6,75 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EFF4CCA62ECD96460032EFD4 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF4CC7F2ECD778D0032EFD4 /* WidgetKit.framework */; };
+		EFF4CCA72ECD96460032EFD4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF4CC812ECD778D0032EFD4 /* SwiftUI.framework */; };
+		EFF4CCB22ECD96470032EFD4 /* TutorialWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EFF4CCA52ECD96460032EFD4 /* TutorialWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFF4CCB02ECD96470032EFD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFF4CC632ECD75BD0032EFD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFF4CCA42ECD96460032EFD4;
+			remoteInfo = TutorialWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EFF4CC982ECD778F0032EFD4 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EFF4CCB22ECD96470032EFD4 /* TutorialWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		EFF4CC6B2ECD75BD0032EFD4 /* ActivityKitTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityKitTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFF4CC7F2ECD778D0032EFD4 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		EFF4CC812ECD778D0032EFD4 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		EFF4CCA52ECD96460032EFD4 /* TutorialWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TutorialWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		EFF4CCB32ECD96470032EFD4 /* Exceptions for "TutorialWidget" folder in "TutorialWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = EFF4CCA42ECD96460032EFD4 /* TutorialWidgetExtension */;
+		};
+		EFF4CCB82ECD97DC0032EFD4 /* Exceptions for "ActivityKitTutorial" folder in "TutorialWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				TimeTrackingAttributes.swift,
+			);
+			target = EFF4CCA42ECD96460032EFD4 /* TutorialWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		EFF4CC6D2ECD75BD0032EFD4 /* ActivityKitTutorial */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EFF4CCB82ECD97DC0032EFD4 /* Exceptions for "ActivityKitTutorial" folder in "TutorialWidgetExtension" target */,
+			);
 			path = ActivityKitTutorial;
+			sourceTree = "<group>";
+		};
+		EFF4CCA82ECD96460032EFD4 /* TutorialWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EFF4CCB32ECD96470032EFD4 /* Exceptions for "TutorialWidget" folder in "TutorialWidgetExtension" target */,
+			);
+			path = TutorialWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +87,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFF4CCA22ECD96460032EFD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFF4CCA72ECD96460032EFD4 /* SwiftUI.framework in Frameworks */,
+				EFF4CCA62ECD96460032EFD4 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				EFF4CC6D2ECD75BD0032EFD4 /* ActivityKitTutorial */,
+				EFF4CCA82ECD96460032EFD4 /* TutorialWidget */,
+				EFF4CC7E2ECD778D0032EFD4 /* Frameworks */,
 				EFF4CC6C2ECD75BD0032EFD4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +113,18 @@
 			isa = PBXGroup;
 			children = (
 				EFF4CC6B2ECD75BD0032EFD4 /* ActivityKitTutorial.app */,
+				EFF4CCA52ECD96460032EFD4 /* TutorialWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EFF4CC7E2ECD778D0032EFD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFF4CC7F2ECD778D0032EFD4 /* WidgetKit.framework */,
+				EFF4CC812ECD778D0032EFD4 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +137,12 @@
 				EFF4CC672ECD75BD0032EFD4 /* Sources */,
 				EFF4CC682ECD75BD0032EFD4 /* Frameworks */,
 				EFF4CC692ECD75BD0032EFD4 /* Resources */,
+				EFF4CC982ECD778F0032EFD4 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EFF4CCB12ECD96470032EFD4 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				EFF4CC6D2ECD75BD0032EFD4 /* ActivityKitTutorial */,
@@ -69,6 +153,28 @@
 			productName = ActivityKitTutorial;
 			productReference = EFF4CC6B2ECD75BD0032EFD4 /* ActivityKitTutorial.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EFF4CCA42ECD96460032EFD4 /* TutorialWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFF4CCB42ECD96470032EFD4 /* Build configuration list for PBXNativeTarget "TutorialWidgetExtension" */;
+			buildPhases = (
+				EFF4CCA12ECD96460032EFD4 /* Sources */,
+				EFF4CCA22ECD96460032EFD4 /* Frameworks */,
+				EFF4CCA32ECD96460032EFD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EFF4CCA82ECD96460032EFD4 /* TutorialWidget */,
+			);
+			name = TutorialWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = TutorialWidgetExtension;
+			productReference = EFF4CCA52ECD96460032EFD4 /* TutorialWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +187,9 @@
 				LastUpgradeCheck = 2610;
 				TargetAttributes = {
 					EFF4CC6A2ECD75BD0032EFD4 = {
+						CreatedOnToolsVersion = 26.1.1;
+					};
+					EFF4CCA42ECD96460032EFD4 = {
 						CreatedOnToolsVersion = 26.1.1;
 					};
 				};
@@ -100,12 +209,20 @@
 			projectRoot = "";
 			targets = (
 				EFF4CC6A2ECD75BD0032EFD4 /* ActivityKitTutorial */,
+				EFF4CCA42ECD96460032EFD4 /* TutorialWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EFF4CC692ECD75BD0032EFD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFF4CCA32ECD96460032EFD4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +239,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFF4CCA12ECD96460032EFD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFF4CCB12ECD96470032EFD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFF4CCA42ECD96460032EFD4 /* TutorialWidgetExtension */;
+			targetProxy = EFF4CCB02ECD96470032EFD4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		EFF4CC742ECD75BE0032EFD4 /* Debug */ = {
@@ -256,6 +388,7 @@
 				DEVELOPMENT_TEAM = T9MD4URZFH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -288,6 +421,7 @@
 				DEVELOPMENT_TEAM = T9MD4URZFH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -303,6 +437,66 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EFF4CCB52ECD96470032EFD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T9MD4URZFH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TutorialWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TutorialWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.superkookai.ActivityKitTutorial.TutorialWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFF4CCB62ECD96470032EFD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T9MD4URZFH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TutorialWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TutorialWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.superkookai.ActivityKitTutorial.TutorialWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -327,6 +521,15 @@
 			buildConfigurations = (
 				EFF4CC772ECD75BE0032EFD4 /* Debug */,
 				EFF4CC782ECD75BE0032EFD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFF4CCB42ECD96470032EFD4 /* Build configuration list for PBXNativeTarget "TutorialWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFF4CCB52ECD96470032EFD4 /* Debug */,
+				EFF4CCB62ECD96470032EFD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
