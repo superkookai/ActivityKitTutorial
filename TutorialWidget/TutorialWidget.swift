@@ -19,11 +19,11 @@ struct TutorialWidget: Widget {
                     TimeTrackingWidgetView(context: context)
                 }
             } compactLeading: {
-                Text("👈👈 Leading")
+                TimeTrackingWidgetView(context: context)
             } compactTrailing: {
-                Text("Trailing 👉👉")
+                
             } minimal: {
-                Text("MI")
+                
             }
 
         }
@@ -37,6 +37,6 @@ struct TimeTrackingWidgetView: View {
     var body: some View {
         Text(context.state.startTime, style: .relative)
             .padding()
-            .background(.regularMaterial,in: .capsule)
+            .frame(maxWidth: .infinity, alignment: .center)
     }
 }
