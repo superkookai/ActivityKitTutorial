@@ -12,16 +12,16 @@ import ActivityKit
 struct TutorialWidget: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: TimeTrackingAttributes.self) { context in
-            TimeTrackingWidgetView(context: context)
+            TimeTrackingWidgetExpandView(context: context)
         } dynamicIsland: { context in
             DynamicIsland {
                 DynamicIslandExpandedRegion(.bottom) {
-                    TimeTrackingWidgetView(context: context)
+                    TimeTrackingWidgetExpandView(context: context)
                 }
             } compactLeading: {
-                TimeTrackingWidgetView(context: context)
+                Text("⏰")
             } compactTrailing: {
-                
+                TimeTrackingWidgetView(context: context)
             } minimal: {
                 
             }
@@ -36,7 +36,30 @@ struct TimeTrackingWidgetView: View {
     
     var body: some View {
         Text(context.state.startTime, style: .relative)
-            .padding()
-            .frame(maxWidth: .infinity, alignment: .center)
+    }
+}
+
+struct TimeTrackingWidgetExpandView: View {
+    let context: ActivityViewContext<TimeTrackingAttributes>
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            Text("Timer Tracking".uppercased())
+                .foregroundStyle(.secondary)
+                .minimumScaleFactor(0.8)
+            
+            Text(context.state.startTime, style: .relative)
+                .bold()
+            
+            Button {
+                
+            } label: {
+                Text("Contact Superkookai")
+                    .padding(8)
+            }
+            .buttonStyle(.borderedProminent)
+            .tint(.pink)
+
+        }
     }
 }

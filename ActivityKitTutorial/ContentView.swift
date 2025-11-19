@@ -21,12 +21,12 @@ struct ContentView: View {
                 if let startTime {
                     Text(startTime, style: .relative)
                         .font(.title)
-                        .frame(width: 150, height: 80)
+                        .padding()
                         .background(.regularMaterial,in: .capsule)
                 } else {
                     Text(" ")
                         .font(.title)
-                        .frame(width: 150, height: 80)
+                        .padding()
                 }
                 
                 Button {
